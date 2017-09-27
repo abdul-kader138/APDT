@@ -65,6 +65,12 @@ public class ScreenSecond extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 System.out.println("test");
+
+                /*
+                *   show alert using common method
+                * */
+
+
                 AlertDialog a = getAlertDialog(getApplicationContext()).create();
                 a.setTitle("Paragon Group");
                 a.show();
@@ -73,6 +79,11 @@ public class ScreenSecond extends AppCompatActivity {
 
 
     }
+
+
+    /*
+    *Create a Alert Dialog box Object which  we call ad-hoc
+    * */
 
     private AlertDialog.Builder getAlertDialog(Context context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
