@@ -1,12 +1,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <Button
+
+    <TextView
+        android:id="@+id/st1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back To Home"
+        android:text="Welcome to Paragon Group"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" " />
+
+    <EditText
+        android:id="@+id/set1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="25sp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" " />
+
+
+    <Button
         android:id="@+id/bs"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back To Home" />
 
 </LinearLayout>
