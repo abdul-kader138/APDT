@@ -16,22 +16,12 @@ public class ScreenSecond extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
-        /*
-        * Check and work with Alert showing
-        * */
-
         setContentView(R.layout.activity_second);
 
 
 
 
-
-
-
-        /*
+          /*
            * getIntent().getExtras() - get data from mainActivity;
            * and show it at toast
            * */
@@ -58,6 +48,14 @@ public class ScreenSecond extends AppCompatActivity {
                 finish();
             }
         });
+
+
+
+
+
+               /*
+               * Check and work with Alert showing
+               * */
 
 
         Button button2 = (Button) findViewById(R.id.bs1);
