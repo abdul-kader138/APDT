@@ -1,6 +1,4 @@
 package com.example.akader.myapplication;
-
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,12 +9,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+
+
 public class ScreenSecond extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
         TextView tv = new TextView(this);
         tv.setText("second activity");
@@ -31,7 +29,9 @@ public class ScreenSecond extends AppCompatActivity {
            * */
 
         Bundle bundle = getIntent().getExtras();
-        Toast.makeText(getApplicationContext(), bundle.getString("val") + bundle.getString("val2"), Toast.LENGTH_LONG).show();
+        Toast toast = Toast.makeText(getApplicationContext(), bundle.getString("val") + bundle.getString("val2"), Toast.LENGTH_LONG);
+        toast.setMargin(300, 500);
+        toast.show();
         Button button = (Button) findViewById(R.id.bs);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,11 +46,7 @@ public class ScreenSecond extends AppCompatActivity {
                 intent.putExtra("Msg", editText.getText().toString());
                 setResult(2121, intent);
                 finish();
-
-
             }
-
         });
     }
-
 }

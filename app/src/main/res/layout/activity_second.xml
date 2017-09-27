@@ -8,7 +8,7 @@
         android:id="@+id/st1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to Paragon Group"
+        android:text="@string/header"
         android:textSize="25sp" />
 
     <TextView
