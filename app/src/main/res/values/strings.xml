@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="header">Welcome to Paragon Group</string>
+    <string name="buttonUser">User</string>
+    <string name="buttonAdmin">Admin</string>
     <string name="imageDes">User Image</string>
 </resources>

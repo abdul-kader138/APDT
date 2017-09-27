@@ -25,26 +25,39 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/user"
         android:contentDescription="@string/imageDes"
+        android:src="@drawable/user" />
+
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonAdmin"
+        android:id="@+id/cb1"
         />
+
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonAdmin"
+        android:id="@+id/cb2"
+        />
+
 
     <Button
         android:id="@+id/b"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Dial"
-        android:textSize="25sp"
-        />
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/b2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="About Us"
-        android:textSize="25sp"
-        />
-
+        android:textSize="25sp" />
 
 
 </LinearLayout>

@@ -1,4 +1,5 @@
 package com.example.akader.myapplication;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 
 public class ScreenSecond extends AppCompatActivity {
@@ -27,7 +27,9 @@ public class ScreenSecond extends AppCompatActivity {
            * */
 
         Bundle bundle = getIntent().getExtras();
-        Toast toast = Toast.makeText(getApplicationContext(), bundle.getString("val") + bundle.getString("val2"), Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(getApplicationContext(), bundle.getString("val")
+                        + bundle.getString("val2") + bundle.getString("chk") + bundle.getString("chk1"),
+                Toast.LENGTH_LONG);
         toast.setMargin(300, 500);
         toast.show();
         Button button = (Button) findViewById(R.id.bs);
