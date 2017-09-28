@@ -29,6 +29,7 @@ public class ScreenSecond extends AppCompatActivity {
         * Rating example
         * setNumStars()- Define how many stars we want to show
         * setRating()-Define how many stars are blinking
+        * layout_width,layout_height must be wrap_content
         * */
 
 
