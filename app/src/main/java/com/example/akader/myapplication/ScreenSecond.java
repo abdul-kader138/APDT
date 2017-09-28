@@ -13,6 +13,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
+import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -25,6 +26,50 @@ public class ScreenSecond extends AppCompatActivity {
 
 
 
+
+       /*
+        * SeekBar - Working with a SeekBar
+        *
+        * */
+
+        SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar);
+
+
+        /*
+        * SeekBar - Get SeekBar changed Value
+        *
+        * */
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                Toast.makeText(getApplicationContext(), "-" + i, Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+
+
+
+        /*
+        * WebView - Use External URL using webkit engine
+        *
+        * */
+
+//                WebView webView=(WebView) findViewById(R.id.webView);
+//                webView.loadUrl("http://javatpoint.com/");
+
+
+
         /*
         * Rating example
         * setNumStars()- Define how many stars we want to show
@@ -33,8 +78,7 @@ public class ScreenSecond extends AppCompatActivity {
         * */
 
 
-
-        RatingBar ratingBar=(RatingBar) findViewById(R.id.rating);
+        RatingBar ratingBar = (RatingBar) findViewById(R.id.rating);
 
 
 
@@ -79,7 +123,7 @@ public class ScreenSecond extends AppCompatActivity {
         * */
 
         String[] countries = getResources().getStringArray(R.array.countries);
-        ArrayAdapter<String> arrayAdapters = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,countries);
+        ArrayAdapter<String> arrayAdapters = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, countries);
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         spinner.setAdapter(arrayAdapters);
 
@@ -91,11 +135,10 @@ public class ScreenSecond extends AppCompatActivity {
         * */
 
 
-
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                String val=(String) adapterView.getItemAtPosition(i);
+                String val = (String) adapterView.getItemAtPosition(i);
                 System.out.println(val);
             }
 
