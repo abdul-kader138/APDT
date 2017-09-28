@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 
@@ -20,6 +21,8 @@ public class ScreenSecond extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+
+
 
 
         /*
@@ -51,6 +54,44 @@ public class ScreenSecond extends AppCompatActivity {
                 System.out.println(text);
             }
         });
+
+
+
+
+         /*
+        * Check for  Spinner
+        * getResources().getStringArray(R.array.countries) - Used to load Data from XMl file        *
+        * ArrayAdapter- Is object of List and its constructor params are ()-
+         * Context,android.R.layout.simple_spinner_dropdown_item,arrays
+        * */
+
+        String[] countries = getResources().getStringArray(R.array.countries);
+        ArrayAdapter<String> arrayAdapters = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,countries);
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        spinner.setAdapter(arrayAdapters);
+
+
+
+         /*
+        * To get Selected Item of Auto Complete Text View
+        * adapterView.getItemAtPosition(i) - here i index of selected value       *
+        * */
+
+
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String val=(String) adapterView.getItemAtPosition(i);
+                System.out.println(val);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
 
 
 
