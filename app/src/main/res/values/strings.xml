@@ -5,4 +5,16 @@
     <string name="buttonAdmin">Admin</string>
     <string name="imageDes">User Image</string>
     <string name="alertMsg">Do you want to close this application ?</string>
+
+    <string-array name="countries" >
+        <item>Australia</item>
+        <item>Bangladesh</item>
+        <item>Canada</item>
+        <item>China</item>
+        <item>Iran</item>
+        <item>Iraq</item>
+        <item>Uganda</item>
+        <item>Turkey</item>
+        <item>Russia</item>
+    </string-array>
 </resources>

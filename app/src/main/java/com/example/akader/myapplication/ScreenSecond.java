@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -18,6 +21,36 @@ public class ScreenSecond extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+
+        /*
+        * Check for  Auto Complete Text View
+        * getResources().getStringArray(R.array.countries) - Used to load Data from XMl file        *
+        * ArrayAdapter- Is object of List and its constructor params are ()-
+         * Context,android.R.layout.simple_dropdown_item_1line,arrays
+        * */
+
+        String[] countriesList = getResources().getStringArray(R.array.countries);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_dropdown_item_1line, countriesList);
+        AutoCompleteTextView autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.actv);
+        autoCompleteTextView.setAdapter(arrayAdapter);
+        autoCompleteTextView.setThreshold(1);
+
+
+
+         /*
+        * To get Selected Item of Auto Complete Text View
+        * adapterView.getItemAtPosition(i) - here i index of selected value       *
+        * */
+
+
+        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                System.out.println("Get Value of");
+                String text = (String) adapterView.getItemAtPosition(i);
+                System.out.println(text);
+            }
+        });
 
 
 
