@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -22,6 +23,17 @@ public class ScreenSecond extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+
+
+        /*
+        * Rating example
+        * setNumStars()- Define how many stars we want to show
+        * setRating()-Define how many stars are blinking
+        * */
+
+
+
+        RatingBar ratingBar=(RatingBar) findViewById(R.id.rating);
 
 
 
