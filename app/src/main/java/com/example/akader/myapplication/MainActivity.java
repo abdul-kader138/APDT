@@ -10,6 +10,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.akader.myapplication.Service.PlayerService;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,8 +22,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        Button sButton = (Button) findViewById(R.id.sMedia);
+        Button pButton = (Button) findViewById(R.id.pMedia);
+        sButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startService(new Intent(getApplicationContext(), PlayerService.class));
+            }
+        });
 
-
+        pButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stopService(new Intent(getApplicationContext(), PlayerService.class));
+            }
+        });
 
 
 
@@ -32,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
         Button button = (Button) findViewById(R.id.b);
         Button button2 = (Button) findViewById(R.id.b2);
-
 
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -80,8 +94,8 @@ public class MainActivity extends AppCompatActivity {
                 EditText editText1 = (EditText) findViewById(R.id.et1);
                 CheckBox checkBox = (CheckBox) findViewById(R.id.cb1);
                 CheckBox checkBox1 = (CheckBox) findViewById(R.id.cb2);
-                String s=String.valueOf(checkBox.isChecked());
-                String s2=String.valueOf(checkBox1.isChecked());
+                String s = String.valueOf(checkBox.isChecked());
+                String s2 = String.valueOf(checkBox1.isChecked());
 
         /*
         * Communicate between Activity to Activity
@@ -91,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent1 = new Intent(MainActivity.this, ScreenSecond.class);
                 intent1.putExtra("val", editText1.getText().toString());
                 intent1.putExtra("val2", "Hello");
-                intent1.putExtra("chk",s);
+                intent1.putExtra("chk", s);
                 intent1.putExtra("chk1", s2);
                 startActivityForResult(intent1, 2121);
             }
