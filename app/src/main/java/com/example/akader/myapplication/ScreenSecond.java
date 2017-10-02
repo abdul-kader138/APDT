@@ -17,12 +17,14 @@ import android.widget.RatingBar;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 
 public class ScreenSecond extends AppCompatActivity {
 
     DatePicker datePicker;
+    TimePicker timePicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,17 +67,22 @@ public class ScreenSecond extends AppCompatActivity {
 
 
        /*
-        * Date Picker
+        * Date & Time Picker
         *
         * */
 
         datePicker = (DatePicker) findViewById(R.id.dp);
+        timePicker = (TimePicker) findViewById(R.id.tp);
         Button dpButton = (Button) findViewById(R.id.pdid);
         dpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                String dateVal=datePicker.getDayOfMonth() + "-" + datePicker.getMonth() + "-" + datePicker.getYear();
+                String timeVal=timePicker.getCurrentHour()+":"+timePicker.getCurrentMinute();
                 TextView date = (TextView) findViewById(R.id.showDate);
-                date.setText(datePicker.getDayOfMonth() + "-" + datePicker.getMonth() + "-" + datePicker.getYear());
+                date.setText("Date: "+dateVal+ "& Time: " +timeVal);
+
             }
         });
 
