@@ -11,14 +11,19 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.SeekBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
 public class ScreenSecond extends AppCompatActivity {
+
+    DatePicker datePicker;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +61,27 @@ public class ScreenSecond extends AppCompatActivity {
 
             }
         });
+
+
+
+       /*
+        * Date Picker
+        *
+        * */
+
+        datePicker = (DatePicker) findViewById(R.id.dp);
+        Button dpButton = (Button) findViewById(R.id.pdid);
+        dpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TextView date = (TextView) findViewById(R.id.showDate);
+                date.setText(datePicker.getDayOfMonth() + "-" + datePicker.getMonth() + "-" + datePicker.getYear());
+            }
+        });
+
+
+
+
 
 
 
