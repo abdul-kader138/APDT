@@ -6,8 +6,9 @@
     android:numColumns="auto_fit"
     android:padding="@android:dimen/app_icon_size"
     android:gravity="center"
-    android:background="@color/colorPrimary"
+    android:background="@color/bgColor"
     android:columnWidth="100dp"
     android:orientation="vertical">
+
 
 </GridView>

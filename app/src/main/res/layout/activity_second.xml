@@ -95,12 +95,6 @@
             android:layout_height="wrap_content" />
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/blankVal" />
-
-
         <TimePicker
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -133,5 +127,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Send" />
+
+        <CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cView"
+            />
     </LinearLayout>
 </ScrollView>
