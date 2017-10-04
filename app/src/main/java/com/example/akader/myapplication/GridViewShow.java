@@ -18,9 +18,12 @@ public class GridViewShow extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.grid_view);
-        Integer[] test={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
-        ArrayAdapter<Integer> arrayAdapter=new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1,test);
-        GridView gridView=(GridView) findViewById(R.id.gView);
+        Integer[] test = {1, 2, 3, 4,
+                5, 6, 7, 8,
+                9, 10, 11, 12,
+                13, 14, 15, 16};
+        ArrayAdapter<Integer> arrayAdapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, test);
+        GridView gridView = (GridView) findViewById(R.id.gView);
         gridView.setAdapter(arrayAdapter);
     }
 }
