@@ -26,6 +26,25 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+          /*
+        * Table Layout Showing
+        *
+        *
+        * */
+
+
+        Button table=(Button) findViewById(R.id.tViewShow);
+
+        table.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(), TableRowLayout.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         /*
         * Grid View Showing
         *
