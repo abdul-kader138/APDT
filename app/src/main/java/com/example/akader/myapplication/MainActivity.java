@@ -2,13 +2,16 @@ package com.example.akader.myapplication;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import com.example.akader.myapplication.Service.PlayerService;
 
@@ -22,11 +25,44 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
+        /*
+        * Grid View Showing
+        *
+        *
+        * */
+
+
+        Button gridView=(Button) findViewById(R.id.gViewShow);
+
+        gridView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(), GridViewShow.class);
+                startActivity(intent);
+            }
+        });
+
+
         Button sButton = (Button) findViewById(R.id.sMedia);
         Button pButton = (Button) findViewById(R.id.pMedia);
         sButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                VideoView videoView =(VideoView)findViewById(R.id.vView);
+                MediaController mediaController= new MediaController(getApplicationContext());
+                mediaController.setAnchorView(videoView);
+
+                //specify the location of media file
+                String path=Environment.getExternalStorageDirectory().getPath()+"/raw/test_v.mp4";
+                Uri uri=Uri.parse(Environment.getExternalStorageDirectory().getPath()+"/raw/test_v.mp4");
+
+                //Setting MediaController and URI, then starting the videoView
+                videoView.setMediaController(mediaController);
+                videoView.setVideoURI(uri);
+                videoView.requestFocus();
+                videoView.start();
                 startService(new Intent(getApplicationContext(), PlayerService.class));
             }
         });
