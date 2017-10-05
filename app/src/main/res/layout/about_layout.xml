@@ -2,13 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    tools:context=".About">
 
-    <ImageView
+
+<ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/bgimage" />
+        android:src="@drawable/bgimage"/>
 
     <TextView
         android:id="@+id/f1View"
