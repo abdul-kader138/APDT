@@ -26,6 +26,48 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+        /*
+        * Buttton View Layout Showing
+        *
+        *
+        * */
+
+
+        Button bShow=(Button) findViewById(R.id.bShow);
+
+        bShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(), ButtonShowView.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+        /*
+        * Frame View Layout Showing
+        *
+        *
+        * */
+
+
+        Button fTable=(Button) findViewById(R.id.fViewShow);
+
+        fTable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(), FrameViewLayout.class);
+                startActivity(intent);
+            }
+        });
+
+
+
           /*
         * Table Layout Showing
         *

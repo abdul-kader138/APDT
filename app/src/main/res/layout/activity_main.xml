@@ -99,5 +99,20 @@
             android:text="Table Layout View" />
 
 
+        <Button
+            android:id="@+id/fViewShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Frame Layout View" />
+
+
+        <Button
+            android:id="@+id/bShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button View" />
+
+
+
     </LinearLayout>
 </ScrollView>

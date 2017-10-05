@@ -6,18 +6,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/bgImage"/>
+        android:src="@drawable/bgimage"/>
 
     <TextView
         android:id="@+id/fView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="100dp"
+
         android:background="#f84d5651"
         android:gravity="center"
-        android:padding="16dp"
-        android:text="Frame Layout"
+        android:padding="25dp"
+        android:text="Who are u?"
         android:textColor="#fff"
         android:textSize="20sp" />
 
@@ -30,7 +31,7 @@
         android:background="#f8852e02"
         android:gravity="center"
         android:padding="16dp"
-        android:text="Android Frame Layout Example"
+        android:text="Explore Yourself"
         android:textColor="#fff"
         android:textSize="24sp" />
 

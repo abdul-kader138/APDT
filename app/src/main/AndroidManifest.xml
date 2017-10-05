@@ -39,6 +39,21 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".FrameViewLayout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <action android:name="android.intent.category.LAUNCHER"></action>
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".ButtonShowView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <action android:name="android.intent.category.LAUNCHER"></action>
+            </intent-filter>
+        </activity>
+
         <service android:name=".Service.PlayerService" android:enabled="true">
 
         </service>
