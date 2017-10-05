@@ -116,7 +116,10 @@
             android:id="@+id/tShow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:text="Tab View" />
+
+
 
     </LinearLayout>
 </ScrollView>
