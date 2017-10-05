@@ -27,11 +27,30 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        /*
+        * Tab View Layout Showing
+        * */
+
+
+        Button tShow=(Button) findViewById(R.id.tShow);
+
+        tShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(), TabView.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+
+
 
         /*
         * Buttton View Layout Showing
-        *
-        *
         * */
 
 

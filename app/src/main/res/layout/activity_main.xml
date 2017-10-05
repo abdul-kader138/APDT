@@ -112,7 +112,11 @@
             android:layout_height="wrap_content"
             android:text="Button View" />
 
-
+        <Button
+            android:id="@+id/tShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tab View" />
 
     </LinearLayout>
 </ScrollView>
