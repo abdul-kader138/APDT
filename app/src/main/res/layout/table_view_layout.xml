@@ -40,6 +40,7 @@
             android:textColor="#fff" />
 
     </TableRow>
+
     <TableRow
         android:id="@+id/row_3"
         android:layout_width="match_parent"
@@ -109,10 +110,41 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#ed8404"
+            android:layout_marginRight="2dp"
             android:gravity="center"
-            android:padding="16dp"
-            android:text="Row 5\nColumn 1"
+            android:text="Col1"
             android:textColor="#fff" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:text="Col2"
+            android:layout_marginRight="2dp"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:layout_marginRight="2dp"
+            android:gravity="center"
+            android:text="Col3"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:text="Col4"
+            android:textColor="#fff" />
+
 
     </TableRow>
 
