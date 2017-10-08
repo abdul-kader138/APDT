@@ -39,12 +39,46 @@
                         android:layout_height="match_parent"
                         android:contentDescription="HOME" >
 
-                        <TextView
-                            android:id="@+id/textView1"
-                            android:layout_width="204dp"
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:tools="http://schemas.android.com/tools"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:paddingLeft="10dp"
-                            android:text="TAB 1"/>
+                            tools:context=".Home">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/bgimage" />
+
+                            <TextView
+                                android:id="@+id/f1View"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|right"
+                                android:layout_marginBottom="100dp"
+
+                                android:background="#f84d5651"
+                                android:gravity="center"
+                                android:padding="25dp"
+                                android:text="Who are u?"
+                                android:textColor="#fff"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/f2View1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="70dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="10dp"
+                                android:background="#f8852e02"
+                                android:gravity="center"
+                                android:padding="16dp"
+                                android:text="Explore Yourself"
+                                android:textColor="#fff"
+                                android:textSize="24sp" />
+
+                        </RelativeLayout>
 
                     </LinearLayout>
 

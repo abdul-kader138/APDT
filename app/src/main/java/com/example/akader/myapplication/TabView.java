@@ -1,12 +1,10 @@
 package com.example.akader.myapplication;
 
-import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
-import android.widget.Toast;
 
 
 public class TabView extends AppCompatActivity {
@@ -17,11 +15,12 @@ public class TabView extends AppCompatActivity {
         setContentView(R.layout.tab_view);
 
 
+
         TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
         tabHost.setup();
 
         TabSpec spec1 = tabHost.newTabSpec("Home");
-        Intent intent = new Intent(getApplicationContext(), Home.class);
+        Intent intent = new Intent(this, Home.class);
         spec1.setContent(intent);
 //        spec1.setContent(R.id.tab1);
         spec1.setIndicator("Home");
