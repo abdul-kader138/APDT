@@ -15,34 +15,30 @@ public class TabView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tab_view);
-        TabHost tabHost = (TabHost) findViewById(android.R.id.tabhost); // initiate TabHost
-        TabHost.TabSpec spec; // Reusable TabSpec for each tab
-        Intent intent; // Reusable Intent for each tab
 
 
-        // Do the same for the other tabs
+        TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
+        tabHost.setup();
 
-        spec = tabHost.newTabSpec("HOME"); // Create a new TabSpec using tab host
-        spec.setIndicator("HOME"); // set the “CONTACT” as an indicator
-        // Create an Intent to launch an Activity for the tab (to be reused)
-        intent = new Intent(this, Home.class);
-        spec.setContent(intent);
-        tabHost.addTab(spec);
+        TabSpec spec1 = tabHost.newTabSpec("Home");
+        Intent intent = new Intent(getApplicationContext(), Home.class);
+        spec1.setContent(intent);
+//        spec1.setContent(R.id.tab1);
+        spec1.setIndicator("Home");
 
-        spec = tabHost.newTabSpec("About"); // Create a new TabSpec using tab host
-        spec.setIndicator("ABOUT"); // set the “ABOUT” as an indicator
-        // Create an Intent to launch an Activity for the tab (to be reused)
-        intent = new Intent(this, About.class);
-        spec.setContent(intent);
-        tabHost.addTab(spec);
-        //set tab which one you want to open first time 0 or 1 or 2
-        tabHost.setCurrentTab(1);
-        tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
-            @Override
-            public void onTabChanged(String tabId) {
-                // display the name of the tab whenever a tab is changed
-                Toast.makeText(getApplicationContext(), tabId, Toast.LENGTH_SHORT).show();
-            }
-        });
+
+        TabSpec spec2 = tabHost.newTabSpec("About Us");
+        spec2.setIndicator("About Us");
+        spec2.setContent(R.id.tab2);
+
+
+        TabSpec spec3 = tabHost.newTabSpec("Service");
+        spec3.setContent(R.id.tab3);
+        spec3.setIndicator("Service");
+        tabHost.addTab(spec1);
+        tabHost.addTab(spec2);
+        tabHost.addTab(spec3);
+
+
     }
 }
